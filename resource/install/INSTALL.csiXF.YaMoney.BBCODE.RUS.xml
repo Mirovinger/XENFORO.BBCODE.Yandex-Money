@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="csiXF_bbCode_58D2B594" title="(CSI/XF/BBCODE) Yandex Money" version_string="1.1.1" version_id="4" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="custom_bb_code_yamoney_btn_title" version_id="3" version_string="1.1.0"><![CDATA[Яндекс.Деньги: Кнопка]]></phrase>
+    <phrase title="custom_bb_code_yamoney_btn_desc" version_id="3" version_string="1.1.0"><![CDATA[Добавление кнопки Яндекс.Деньги в сообщение пользователя.]]></phrase>
+    <phrase title="custom_bb_code_yamoney_form_title" version_id="1" version_string="1.0.0"><![CDATA[Яндекс.Деньги: Форма]]></phrase>
+    <phrase title="custom_bb_code_yamoney_form_desc" version_id="1" version_string="1.0.0"><![CDATA[Добавление формы Яндекс.Деньги в сообщение пользователя.]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="csiXF_bbCode_58D2B594_tag_form" version_id="4" version_string="1.1.1"><![CDATA[<div class="csiXF_bbCode_58D2B594 bbCodeYandexMoney bbCodeYandexMoneyForm"><iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account={xen:raw $account}
+&amp;quickpay=shop&amp;payment-type-choice=on&amp;writer={xen:raw $writer}&amp;label={xen:raw $label}&amp;targets={xen:raw $targets}&amp;targets-hint=&amp;default-sum={xen:raw $sum}&amp;button-text=0{xen:raw $btn_text}&amp;hint={xen:if $comment, '&amp;comment=on'}{xen:if $fio, '&amp;fio=on'}{xen:if $mail, '&amp;mail=on'}{xen:if $phone, '&amp;phone=on'}{xen:if $address, '&amp;address=on'}&amp;successURL=" width="450" height="253"></iframe></div>]]></template>
+    <template title="csiXF_bbCode_58D2B594_tag_button" version_id="4" version_string="1.1.1"><![CDATA[<div class="csiXF_bbCode_58D2B594 bbCodeYandexMoney bbCodeYandexMoneyBtn"><iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/small.xml?account={xen:raw $account}
+&amp;quickpay=small&amp;{xen:raw $payment_type}-payment-type=on&amp;label={xen:raw $label}&amp;button-text=0{xen:raw $btn_text}&amp;button-size={xen:raw $btn_size}&amp;button-color={xen:raw $btn_color}&amp;targets={xen:raw $targets}&amp;default-sum={xen:raw $sum}{xen:if $fio, '&amp;fio=on'}{xen:if $mail, '&amp;mail=on'}{xen:if $phone, '&amp;phone=on'}{xen:if $address, '&amp;address=on'}&amp;successURL=" width="242" height="54"></iframe></div>]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes>
+    <bb_code bb_code_id="yamoney_form" bb_code_mode="callback" has_option="yes" callback_class="CSI\BbCodeYandexMoney\BbCode\Formatter\Base" callback_method="getBbCodeYandexMoneyForm" option_regex="" trim_lines_after="1" plain_children="1" disable_smilies="1" disable_nl2br="1" disable_autolink="1" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+    <bb_code bb_code_id="yamoney_btn" bb_code_mode="callback" has_option="yes" callback_class="CSI\BbCodeYandexMoney\BbCode\Formatter\Base" callback_method="getBbCodeYandexMoneyButton" option_regex="" trim_lines_after="1" plain_children="1" disable_smilies="1" disable_nl2br="1" disable_autolink="1" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+  </bb_codes>
+</addon>
